@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>e4</title>
+    <link rel="stylesheet" href="css/e3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Contrail One">
+</head>
+<body>
+
+  <div id="screen">
+    <div id="header">
+
+      <div class="hp-block hero-hp-block" id="hp-block" style="-webkit-backface-visibility: hidden">
+        <div class="hp-bar">
+          <div id="hero-hp-hurt"></div>
+        </div>
+        <div class="hp-text">
+          <span id="hero-hp">130</span>
+          /
+          <span id="hero-max-hp">130</span>
+        </div>
+      </div>
+      <div id="round-num">10</div>
+    
+
+      <div class="hp-block monster-hp-block" id="hp-block" style="-webkit-backface-visibility: hidden">
+        <div class="hp-bar">
+          <div id="monster-hp-hurt"></div>
+        </div>
+        <div class="hp-text">
+          <span id="monster-hp">130</span>
+          /
+          <span id="monster-max-hp">130</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="plane">
+
+      <div id="hero-image-block">
+        <div class="skill-block">
+          <img src="img/skill.png" class="skill-image" id="skill">
+          <img src="img/heal.png" class="heal-image" id="heal">
+        </div>
+        <div class="character-block">
+          <img src="img/hero.png" class="character-image hero-image">
+          <img class="effect-image" style="display: none">
+          <span class="hurt-text"></span>
+        </div>
+      </div>
+
+      <div id="monster-image-block">
+        <div class="character-block">
+          <img src="img/monster.png" class="character-image monster-image">
+          <img class="effect-image" style="display: none">
+          <span class="hurt-text"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="dialog">
+      <div class="win-dialog">
+        <h2>win!!</h2>
+        <button onclick="location.reload();">play again?</button>
+      </div>
+
+      <div class="lose-dialog">
+        <h2>lose!!</h2>
+        <button onclick="location.reload();">try again?</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <a href="e1.html">e1</a>
+  <a href="e2.html">e2</a>
+  <a href="e3.html">e3</a>
+  <a href="e4.html">e4</a>
+  <a href="e5.html">e5</a>
+
+  <script src="js/e4.js"> </script>
+</body>
