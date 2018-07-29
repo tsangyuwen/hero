@@ -181,10 +181,31 @@ function addSkillEvent(){
 }
 addSkillEvent();
 
+function heroHeal(){
+  hero.getHeal();
+  
+  document.getElementsByClassName('skill-block')[0].style.display = 'none';
+  setTimeout(function(){
+    monster.element.classList.add("attacking");
+
+    setTimeout(function(){
+      monster.attack(hero);
+      monster.element.classList.remove("attacking");
+      endTurn();
+      if(hero.alive == false){
+        finish();
+      }else{
+        document.getElementsByClassName('skill-block')[0].style.display = "block";
+      }
+    }, 500);
+    
+  }, 1000);
+}
+
 function addHealEvent(){
   var heal = document.getElementById('heal');
   heal.onclick = function(){
-    hero.getHeal();
+    heroHeal();
   }
 }
 addHealEvent();
