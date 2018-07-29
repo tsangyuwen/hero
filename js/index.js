@@ -73,6 +73,15 @@ class Hero extends BaseCharacter{
     super.attack(character, Math.floor(damage));
   }
 
+  getHeal(){
+    if(this.hp + 30 > this.maxHp){
+      this.hp = this.maxHp;
+    }else{
+      this.hp += 30;
+    }
+    this.updateHTML(this.hpElement, this.hurtElement);
+  }
+
   getHurt(damage){
     super.getHurt(damage);
     this.updateHTML(this.hpElement, this.hurtElement);
@@ -148,6 +157,14 @@ function addSkillEvent(){
   }
 }
 addSkillEvent();
+
+function addHealEvent(){
+  var heal = document.getElementById('heal');
+  heal.onclick = function(){
+    hero.getHeal();
+  }
+}
+addHealEvent();
 
 var rounds = 10;
 function endTurn(){
